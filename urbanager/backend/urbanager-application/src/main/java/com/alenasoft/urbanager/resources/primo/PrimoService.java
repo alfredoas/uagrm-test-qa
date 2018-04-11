@@ -12,6 +12,8 @@ public class PrimoService {
         }
         if (j==0){
             result = "OK";
+        }else{
+            result = "FAIL";
         }
         return result;
     }
