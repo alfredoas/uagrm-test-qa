@@ -22,4 +22,11 @@ public class PrimoServiceTest {
         assertEquals(expected,primoService.isPrimo(value));
     }
 
+    @Test(expected = Exception.class)
+    public void testIsPrimoIfValueIsLessThanOneShouldReturnException() {
+        PrimoService primoService = new PrimoService();
+        int value = -3;
+        primoService.isPrimo(value);
+    }
+
 }
