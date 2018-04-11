@@ -14,4 +14,12 @@ public class PrimoServiceTest {
         assertEquals(expected,primoService.isPrimo(value));
     }
 
+    @Test
+    public void testIsPrimoIfNoPrimoIntegerShouldReturnFAIL() {
+        PrimoService primoService = new PrimoService();
+        int value = 4;
+        String expected = "FAIL";
+        assertEquals(expected,primoService.isPrimo(value));
+    }
+
 }
