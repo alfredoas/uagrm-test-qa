@@ -5,12 +5,12 @@ public class PrimoService {
     public String isPrimo(int value){
     String result = "";
     int j =0;
-        for (int i = 1; i<=value ; i++){
+        for (int i = 2; i<value ; i++){
             if(value % i ==0){
                 j++;
             }
         }
-        if (j==2){
+        if (j==0){
             result = "OK";
         }
         return result;
