@@ -20,6 +20,12 @@
 
   <dependencies>
 
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>RELEASE</version>
+      </dependency>
+
     <dependency>
       <groupId>com.alenasoft</groupId>
       <artifactId>urbanager-api</artifactId>
