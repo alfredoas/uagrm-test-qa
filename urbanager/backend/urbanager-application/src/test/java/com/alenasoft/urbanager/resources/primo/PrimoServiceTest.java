@@ -44,4 +44,11 @@ public class PrimoServiceTest {
         Assert.assertEquals(expected,primoService.getFirstNPrimo(value));
     }
 
+    @Test(expected = Exception.class)
+    public void testGetFirtsNPrimoIfValueIsLessThanOneShouldReturnException() throws Exception{
+        PrimoService primoService = new PrimoServiceImpl();
+        int value = -3;
+        primoService.getFirstNPrimo(value);
+    }
+
 }
