@@ -17,7 +17,7 @@ public class PrimoServiceTest {
         PrimoService primoService = new PrimoServiceImpl();
         int value = 5;
         String expected = "OK";
-        assertEquals(expected,primoService.isPrimo(value));
+        assertEquals(expected,primoService.isPrimoToString(value));
     }
 
     @Test
@@ -25,14 +25,14 @@ public class PrimoServiceTest {
         PrimoService primoService = new PrimoServiceImpl();
         int value = 4;
         String expected = "FAIL";
-        assertEquals(expected,primoService.isPrimo(value));
+        assertEquals(expected,primoService.isPrimoToString(value));
     }
 
     @Test(expected = Exception.class)
     public void testIsPrimoIfValueIsLessThanOneShouldReturnException() throws Exception{
         PrimoService primoService = new PrimoServiceImpl();
         int value = -3;
-        primoService.isPrimo(value);
+        primoService.isPrimoToString(value);
     }
 
     @Test

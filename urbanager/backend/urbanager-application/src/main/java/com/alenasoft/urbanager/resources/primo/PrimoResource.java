@@ -1,14 +1,8 @@
 package com.alenasoft.urbanager.resources.primo;
 
-import com.alenasoft.urbanager.api.Result;
-import com.alenasoft.urbanager.resources.hello.HelloService;
-import io.dropwizard.hibernate.UnitOfWork;
-
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import java.net.URI;
 
 @Path("primo")
 public class PrimoResource {
@@ -27,7 +21,7 @@ public class PrimoResource {
     public String getResult(@PathParam("entero") int entero) {
         String result="";
         try {
-            result = this.service.isPrimo(entero);
+            result = this.service.isPrimoToString(entero);
         } catch (Exception e){
             result = "FAIL";
         }

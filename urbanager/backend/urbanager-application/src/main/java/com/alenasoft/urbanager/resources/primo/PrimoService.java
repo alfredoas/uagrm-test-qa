@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface PrimoService {
 
-    public String isPrimo(int value) throws Exception;
+    public String isPrimoToString(int value) throws Exception;
 
     List<String> getFirstNPrimo(int value);
 }
