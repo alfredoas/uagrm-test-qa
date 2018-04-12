@@ -7,5 +7,5 @@ public interface PrimoService {
 
     public String isPrimoToString(int value) throws Exception;
 
-    List<String> getFirstNPrimo(int value);
+    List<String> getFirstNPrimo(int value) throws Exception;
 }

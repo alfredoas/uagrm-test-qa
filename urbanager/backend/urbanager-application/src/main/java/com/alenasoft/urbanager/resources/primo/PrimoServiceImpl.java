@@ -18,7 +18,10 @@ public class PrimoServiceImpl implements PrimoService{
     }
 
     @Override
-    public List<String> getFirstNPrimo(int value) {
+    public List<String> getFirstNPrimo(int value) throws Exception {
+        if (value<1) {
+            throw new Exception();
+        }
         List result = new ArrayList<String>();
         int i = 0;
         int j = 2;
