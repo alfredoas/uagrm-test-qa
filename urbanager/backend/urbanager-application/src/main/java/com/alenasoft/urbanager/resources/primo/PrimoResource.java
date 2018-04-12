@@ -3,6 +3,8 @@ package com.alenasoft.urbanager.resources.primo;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.ArrayList;
+import java.util.List;
 
 @Path("primo")
 public class PrimoResource {
@@ -10,11 +12,11 @@ public class PrimoResource {
     @Inject
     private PrimoService service;
 
-    @GET
+   /* @GET
     public String ping() {
         return "OK";
     }
-
+*/
     @GET
     @Path("{entero}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -27,14 +29,18 @@ public class PrimoResource {
         }
         return result;
     }
-/*
-    @GET
-    @Path("query")
-    public String helloWorldQuery(@QueryParam("data") String data,
-                                  @QueryParam("second") String second) {
-        return data + second;
-    }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<String> helloWorldQuery(@QueryParam("limite") int limite){
+        List<String> result=new ArrayList<>();
+        try {
+            result = this.service.getFirstNPrimo(limite);
+        } catch (Exception e){
+        }
+        return result;
+    }
+/*
     @GET
     @UnitOfWork
     @Path("{num1}/{num2}")
